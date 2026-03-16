@@ -68,7 +68,6 @@ body {
   padding: 4%;
   display: flex;
   justify-content: space-between;
-  
 }
 
 #hero-container {
@@ -76,7 +75,19 @@ body {
   height: 75%;
 }
 
+#hero-heading {
+  font-size: 4vw;
+  font-weight: 600;
+}
 
+#hero-text {
+  font-size: clamp(1vw, 3vw, 18px);
+  margin-top: 10px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
 
 /* small screen  */
 @media screen and (max-width: 320px) {
