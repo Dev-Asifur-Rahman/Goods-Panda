@@ -67,26 +67,13 @@ body {
   border-radius: 16px;
   padding: 4%;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
 }
 
-#hero-container {
-  width: 90%;
-  height: 75%;
-}
-
-#hero-heading {
-  font-size: 4vw;
-  font-weight: 600;
-}
-
-#hero-text {
-  font-size: clamp(1vw, 3vw, 18px);
-  margin-top: 10px;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+#hero-image{
+  display: block;
+  margin: 0 auto;
 }
 
 /* small screen  */
@@ -101,6 +88,15 @@ body {
   .margin-y {
     margin: 20px 0;
   }
+
+  #hero {
+    flex-direction: column-reverse;
+  }
+
+  #hero-image {
+    width: 100%;
+    aspect-ratio: 1/1;
+  }
 }
 
 /* medium screen  */
@@ -114,5 +110,16 @@ body {
   }
   .margin-y {
     margin: 40px 0;
+  }
+
+  #hero {
+    flex-direction: column-reverse;
+  }
+
+  #hero-image {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    aspect-ratio: 1/1;
   }
 }
